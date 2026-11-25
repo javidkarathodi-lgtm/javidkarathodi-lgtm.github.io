@@ -62,7 +62,7 @@
       -webkit-mask-image: radial-gradient(ellipse at center, black 45%, transparent 90%);
     }
 
-    /* Ambient Floating Orbs */
+    /* Ambient Floating Orbs & Cards */
     @keyframes floatOrbSlow {
       0%, 100% { transform: translate(0, 0) scale(1); }
       33% { transform: translate(24px, -18px) scale(1.06); }
@@ -83,12 +83,6 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
-    }
-
-    @keyframes pulseRing {
-      0% { transform: scale(0.95); opacity: 0.7; }
-      70% { transform: scale(1.4); opacity: 0; }
-      100% { transform: scale(1.4); opacity: 0; }
     }
 
     .animate-orb-1 {
@@ -175,7 +169,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-600 selection:text-white flex flex-col min-h-screen relative overflow-x-hidden">
 
-  <!-- Soft Colorful Ambient Background Glows for Body -->
+  <!-- Soft Colorful Ambient Background Glows -->
   <div class="pointer-events-none fixed inset-0 overflow-hidden z-0" aria-hidden="true">
     <div class="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-indigo-400/10 blur-3xl"></div>
     <div class="absolute top-1/3 -right-24 w-96 h-96 rounded-full bg-cyan-400/10 blur-3xl"></div>
@@ -213,7 +207,6 @@
     <div class="animate-orb-2 absolute bottom-0 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 sm:pt-14 sm:pb-16 relative z-10">
-      
       <!-- Suite Tagline Pill -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6 shadow-lg">
         <span class="w-2 h-2 rounded-full bg-amber-400"></span>
@@ -224,7 +217,6 @@
 
       <!-- Main Hero Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
         <!-- Left Column: Title, Animated Gradient Highlight, Metrics & Creator Card -->
         <div class="lg:col-span-7">
           <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
@@ -238,9 +230,7 @@
           <!-- Colorful Animated Metric Cards -->
           <div class="mt-7 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl">
             <div class="bg-gradient-to-br from-indigo-500/20 to-blue-600/10 border border-indigo-400/30 rounded-2xl px-4 py-3.5 backdrop-blur-md">
-              <div class="font-display text-2xl sm:text-3xl font-extrabold text-cyan-300">
-                <span class="count-up" data-target="7">7</span> Apps
-              </div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-cyan-300">7 Apps</div>
               <div class="text-xs text-slate-300 mt-0.5 font-medium">Live Web Utilities</div>
             </div>
             <div class="bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-400/30 rounded-2xl px-4 py-3.5 backdrop-blur-md">
@@ -287,10 +277,7 @@
         <!-- Right Column: Custom Colorful Animated SVG Dashboard Illustration -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="relative w-full max-w-md">
-            <!-- Glowing Backdrop Behind Graphic -->
             <div class="absolute -inset-2 bg-gradient-to-r from-indigo-500 via-cyan-400 to-pink-500 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-            
-            <!-- Animated Interactive Workflow SVG Canvas -->
             <div class="relative bg-brand-900/90 backdrop-blur-xl border border-white/15 rounded-3xl p-5 shadow-2xl overflow-hidden">
               <svg viewBox="0 0 420 330" class="w-full h-auto drop-shadow-lg" role="img" aria-label="Animated University of Calicut Exam Automation Workflow Graphic">
                 <defs>
@@ -327,13 +314,11 @@
                 <!-- Central Hub Card: UoC Exam Automation Core -->
                 <g transform="translate(132, 102)">
                   <rect x="0" y="0" width="156" height="126" rx="18" fill="#131C31" stroke="url(#gradIndigoCyan)" stroke-width="2" />
-                  <!-- Top Window Dots -->
                   <circle cx="18" cy="16" r="4" fill="#F43F5E" />
                   <circle cx="31" cy="16" r="4" fill="#FBBF24" />
                   <circle cx="44" cy="16" r="4" fill="#10B981" />
                   <rect x="96" y="11" width="44" height="10" rx="5" fill="rgba(6,182,212,0.22)" />
 
-                  <!-- Colorful Mini Seating & Mark Grid -->
                   <rect x="16" y="34" width="36" height="22" rx="6" fill="url(#gradIndigoCyan)" opacity="0.9" />
                   <rect x="60" y="34" width="36" height="22" rx="6" fill="url(#gradEmerald)" opacity="0.9" />
                   <rect x="104" y="34" width="36" height="22" rx="6" fill="url(#gradAmberPink)" opacity="0.9" />
@@ -341,14 +326,13 @@
                   <rect x="16" y="64" width="58" height="20" rx="6" fill="rgba(255,255,255,0.08)" />
                   <rect x="82" y="64" width="58" height="20" rx="6" fill="url(#gradViolet)" opacity="0.85" />
 
-                  <!-- Animated Progress Bar -->
                   <rect x="16" y="96" width="124" height="10" rx="5" fill="rgba(255,255,255,0.08)" />
                   <rect x="16" y="96" width="96" height="10" rx="5" fill="url(#gradEmerald)">
                     <animate attributeName="width" values="55;124;96" dur="3.5s" repeatCount="indefinite" />
                   </rect>
                 </g>
 
-                <!-- Floating Satellite Card 1 (Top Left - SeatPro) -->
+                <!-- Floating Satellite Card 1 (Top Left) -->
                 <g class="animate-float-1" transform="translate(18, 28)">
                   <rect x="0" y="0" width="118" height="58" rx="14" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
                   <rect x="12" y="13" width="24" height="24" rx="7" fill="url(#gradIndigoCyan)" />
@@ -357,7 +341,7 @@
                   <rect x="44" y="29" width="42" height="7" rx="3.5" fill="#38BDF8" opacity="0.85" />
                 </g>
 
-                <!-- Floating Satellite Card 2 (Top Right - Mark Sheet A4) -->
+                <!-- Floating Satellite Card 2 (Top Right) -->
                 <g class="animate-float-2" transform="translate(282, 34)">
                   <rect x="0" y="0" width="120" height="58" rx="14" fill="#0F172A" stroke="#34D399" stroke-width="1.5" />
                   <rect x="12" y="13" width="24" height="24" rx="7" fill="url(#gradEmerald)" />
@@ -366,7 +350,7 @@
                   <rect x="44" y="29" width="46" height="7" rx="3.5" fill="#34D399" opacity="0.85" />
                 </g>
 
-                <!-- Floating Satellite Card 3 (Bottom Left - FYUGP Register) -->
+                <!-- Floating Satellite Card 3 (Bottom Left) -->
                 <g class="animate-float-2" transform="translate(22, 240)">
                   <rect x="0" y="0" width="122" height="58" rx="14" fill="#0F172A" stroke="#FBBF24" stroke-width="1.5" />
                   <rect x="12" y="13" width="24" height="24" rx="7" fill="url(#gradAmberPink)" />
@@ -375,7 +359,7 @@
                   <rect x="44" y="29" width="48" height="7" rx="3.5" fill="#FBBF24" opacity="0.9" />
                 </g>
 
-                <!-- Floating Satellite Card 4 (Bottom Right - Contingency & Billing) -->
+                <!-- Floating Satellite Card 4 (Bottom Right) -->
                 <g class="animate-float-1" transform="translate(278, 238)">
                   <rect x="0" y="0" width="124" height="58" rx="14" fill="#0F172A" stroke="#F472B6" stroke-width="1.5" />
                   <rect x="12" y="13" width="24" height="24" rx="7" fill="url(#gradViolet)" />
@@ -407,7 +391,6 @@
   <section aria-label="Portfolio Controls" class="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
       <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3.5">
-        
         <!-- Left: Search Input & Category Filter Pills -->
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1">
           <!-- Search Box -->
@@ -478,7 +461,6 @@
 
   <!-- Main Content Area: Interactive Tool Cards Grid -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 flex-grow w-full relative z-10">
-    
     <!-- Section Header -->
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
       <div>
@@ -498,9 +480,7 @@
     </div>
 
     <!-- Tool Cards Grid -->
-    <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Cards are dynamically rendered by JavaScript -->
-    </div>
+    <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
     <!-- Empty State when Search has 0 matches -->
     <div id="emptyState" class="hidden bg-white border border-slate-200 rounded-3xl p-12 text-center shadow-card">
@@ -581,7 +561,6 @@
           </p>
         </div>
 
-        <!-- Footer LinkedIn Link -->
         <div class="flex items-center gap-3">
           <a href="https://in.linkedin.com/in/javidkarathodi" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-[#0A66C2] hover:to-indigo-600 border border-white/15 text-slate-200 hover:text-white text-xs font-semibold transition-all">
@@ -592,7 +571,40 @@
           </a>
         </div>
       </div>
-      // Complete Independent Suite Dataset with Distinct Colorful Themes (Ordered 01 to 07)
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" role="status" aria-live="polite"
+       class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="bg-brand-900/95 backdrop-blur-lg text-white border border-cyan-500/40 rounded-2xl shadow-2xl px-4 py-3.5 flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-400 flex items-center justify-center shrink-0">
+        <svg class="w-4 h-4 text-brand-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div class="min-w-0">
+        <p id="toastTitle" class="text-xs font-bold text-white">Link Copied</p>
+        <p id="toastMessage" class="text-[11px] text-cyan-200 truncate">Ready to share.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic & Interactive Animations -->
+  <script>
+    (function () {
+      const CANONICAL_PORTFOLIO_URL = 'https://javidkarathodi-lgtm.github.io/';
+
+      const ICON_PATHS = {
+        grid: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z',
+        table: 'M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z',
+        book: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+        doc: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+        shield: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+        calc: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+        chart: 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+      };
+
       const UOC_TOOLS = [
         {
           id: 'seatpro',
@@ -602,7 +614,7 @@
           title: 'Exam Seating Arrangement',
           subtitle: 'University of Calicut — UniExam SeatPro',
           liveUrl: 'https://javidkarathodi-lgtm.github.io/uoc-exam-seating-arraignment/',
-          description: 'Supports Regular, SDE, CBCSS & FYUGP PDF nominal rolls, FN/AN session allocation, room summaries, door slips, and paper-wise attendance sheets.',
+          description: 'Automates Regular, SDE, CBCSS, and FYUG PDF nominal roll processing, FN/AN session allocation, room summaries, door slips, and paper-wise attendance sheets.',
           tags: ['Regular / SDE / CBCSS / FYUGP', 'PDF Nominal Rolls', 'Door & Attendance Slips'],
           topBarGradient: 'from-indigo-600 via-blue-500 to-cyan-400',
           iconGradient: 'from-indigo-600 to-blue-600',
@@ -610,10 +622,7 @@
           badgeStyle: 'bg-indigo-50 text-indigo-700 border-indigo-200',
           tagStyle: 'bg-indigo-50/70 text-indigo-800 border-indigo-100',
           spotlightColor: 'rgba(79, 70, 229, 0.14)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>`
+          iconKey: 'grid'
         },
         {
           id: 'fyugp-apc-generator',
@@ -631,10 +640,7 @@
           badgeStyle: 'bg-sky-50 text-sky-700 border-sky-200',
           tagStyle: 'bg-sky-50/70 text-sky-800 border-sky-100',
           spotlightColor: 'rgba(14, 165, 233, 0.15)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>`
+          iconKey: 'table'
         },
         {
           id: 'fyugp-register',
@@ -652,10 +658,7 @@
           badgeStyle: 'bg-cyan-50 text-cyan-700 border-cyan-200',
           tagStyle: 'bg-cyan-50/70 text-cyan-800 border-cyan-100',
           spotlightColor: 'rgba(6, 182, 212, 0.14)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>`
+          iconKey: 'book'
         },
         {
           id: 'marksheet',
@@ -663,20 +666,17 @@
           category: 'evaluation',
           categoryLabel: 'Evaluation & Billing',
           title: 'Dual A4 Mark Sheet Generator',
-          subtitle: 'University of Calicut — Mark Sheet Utility',
+          subtitle: 'University of Calicut — Original & Duplicate Mark Sheet',
           liveUrl: 'https://javidkarathodi-lgtm.github.io/calicut-marksheet-app/',
-          description: 'Dual Original & Duplicate A4 mark sheet layout with automated number-to-words conversion, mobile easy-entry mode, audio feedback, and direct PDF export.',
-          tags: ['Dual A4 Layout', 'Auto Number-to-Words', 'Direct PDF Export'],
+          description: 'Interactive dual original and duplicate A4 mark sheet generator with automated number-to-words conversion, mobile zoom entry mode, custom semester headers, and instant PDF export.',
+          tags: ['Dual A4 Print Layout', 'Auto Number-to-Words', 'Instant PDF Export'],
           topBarGradient: 'from-emerald-500 via-green-400 to-lime-400',
           iconGradient: 'from-emerald-500 to-green-600',
           btnGradient: 'from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700',
           badgeStyle: 'bg-emerald-50 text-emerald-700 border-emerald-200',
           tagStyle: 'bg-emerald-50/70 text-emerald-800 border-emerald-100',
           spotlightColor: 'rgba(16, 185, 129, 0.14)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>`
+          iconKey: 'doc'
         },
         {
           id: 'malpractice',
@@ -684,20 +684,17 @@
           category: 'conduct',
           categoryLabel: 'Exam Cell Operations',
           title: 'Invigilator Incident & Malpractice Report',
-          subtitle: 'University of Calicut — Malpractice Reporting',
+          subtitle: 'University of Calicut — Exam Malpractice Documentation',
           liveUrl: 'https://javidkarathodi-lgtm.github.io/malpractice-report/',
-          description: 'Standardized University of Calicut malpractice reporting utility for rapid, error-free documentation during exam sessions.',
-          tags: ['Standardized UoC Format', 'Error-Free Documentation', 'A4 Print Ready'],
+          description: 'Mobile-friendly invigilator incident reporting utility supporting up to 10 candidates, multi-QP code tracking, automatic date/room syncing, and standardized PDF export.',
+          tags: ['Up to 10 Candidates', 'Multi-QP Code Tracking', 'Standardized PDF Export'],
           topBarGradient: 'from-rose-500 via-pink-500 to-orange-400',
           iconGradient: 'from-rose-500 to-pink-600',
           btnGradient: 'from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700',
           badgeStyle: 'bg-rose-50 text-rose-700 border-rose-200',
           tagStyle: 'bg-rose-50/70 text-rose-800 border-rose-100',
           spotlightColor: 'rgba(244, 63, 94, 0.14)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>`
+          iconKey: 'shield'
         },
         {
           id: 'remuneration',
@@ -705,20 +702,17 @@
           category: 'evaluation',
           categoryLabel: 'Evaluation & Billing',
           title: 'Examination Remuneration Bill Generator',
-          subtitle: 'University of Calicut — Duty & Valuation Billing',
+          subtitle: 'University of Calicut — Duty & Valuation Bill Automation',
           liveUrl: 'https://javidkarathodi-lgtm.github.io/calicut-remuneration-bill/',
-          description: 'Automated duty and valuation remuneration calculation with clean, print-ready official bill formatting.',
-          tags: ['Duty & Valuation', 'Auto Calculation', 'Official A4 Bill Format'],
+          description: 'Streamlines invigilation duty and centralized valuation remuneration calculation with automated slab rates, tax deductions, and print-ready claim formatting.',
+          tags: ['Automated Rate Slabs', 'Valuation & Invigilation', 'Print-Ready Claim Form'],
           topBarGradient: 'from-amber-500 via-orange-500 to-yellow-400',
           iconGradient: 'from-amber-500 to-orange-600',
           btnGradient: 'from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700',
           badgeStyle: 'bg-amber-50 text-amber-800 border-amber-200',
           tagStyle: 'bg-amber-50/70 text-amber-900 border-amber-100',
           spotlightColor: 'rgba(245, 158, 11, 0.15)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-            </svg>`
+          iconKey: 'calc'
         },
         {
           id: 'contingency-proforma',
@@ -728,7 +722,7 @@
           title: 'Special Additional Contingency Proforma',
           subtitle: 'University of Calicut — Special Additional Contingency Proforma',
           liveUrl: 'https://javidkarathodi-lgtm.github.io/calicut-qp-contingency/',
-          description: 'Automates University of Calicut Special Additional Contingency expenditure proformas for UG, PG, FYUGP (₹4/paper), and SDE (₹8/paper) examinations with drag-and-drop file reading, editable bank details, manual exam date entry, and landscape Cambria print-ready formatting.',
+          description: 'Automates University of Calicut Special Additional Contingency expenditure proformas for UG, PG, FYUGP (₹4/paper), and SDE (₹8/paper) with drag-and-drop file import and landscape print formatting.',
           tags: ['UG / PG / FYUGP (₹4)', 'SDE (₹8)', 'Drag & Drop Import', 'Landscape Print'],
           topBarGradient: 'from-violet-600 via-purple-500 to-fuchsia-500',
           iconGradient: 'from-violet-600 to-fuchsia-600',
@@ -736,19 +730,14 @@
           badgeStyle: 'bg-violet-50 text-violet-700 border-violet-200',
           tagStyle: 'bg-violet-50/70 text-violet-800 border-violet-100',
           spotlightColor: 'rgba(139, 92, 246, 0.14)',
-          iconSvg: `
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>`
+          iconKey: 'chart'
         }
       ];
 
-      // State
       let currentCategory = 'all';
       let currentSearchQuery = '';
       let toastTimeout = null;
 
-      // DOM References
       const toolsGrid = document.getElementById('toolsGrid');
       const emptyState = document.getElementById('emptyState');
       const resultsCounter = document.getElementById('resultsCounter');
@@ -763,27 +752,36 @@
       const toastTitleEl = document.getElementById('toastTitle');
       const toastMessageEl = document.getElementById('toastMessage');
 
-      /**
-       * Show non-intrusive toast notification
-       */
+      function createSvgElement(pathData, className) {
+        const svgNS = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('class', className);
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '2');
+
+        const path = document.createElementNS(svgNS, 'path');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        path.setAttribute('d', pathData);
+        svg.appendChild(path);
+        return svg;
+      }
+
       function showToast(title, message) {
         toastTitleEl.textContent = title;
         toastMessageEl.textContent = message;
         toastEl.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
         toastEl.classList.add('translate-y-0', 'opacity-100');
 
-        if (toastTimeout) {
-          clearTimeout(toastTimeout);
-        }
+        if (toastTimeout) clearTimeout(toastTimeout);
         toastTimeout = setTimeout(() => {
           toastEl.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
           toastEl.classList.remove('translate-y-0', 'opacity-100');
         }, 3200);
       }
 
-      /**
-       * Reliable Clipboard Copy Helper
-       */
       function copyTextToClipboard(textToCopy, successTitle) {
         const textArea = document.createElement('textarea');
         textArea.value = textToCopy;
@@ -815,16 +813,10 @@
         }
       }
 
-      /**
-       * Copy Main Portfolio Link
-       */
       function handleCopyPortfolioLink() {
         copyTextToClipboard(CANONICAL_PORTFOLIO_URL, 'Portal Link Copied!');
       }
 
-      /**
-       * Share formatted suite overview via WhatsApp
-       */
       function handleWhatsAppShare() {
         const message = [
           '*UoC Exam Automation & Utility Suite*',
@@ -861,21 +853,14 @@
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       }
 
-      /**
-       * Quick-share Portfolio on LinkedIn
-       */
       function handleLinkedInShare() {
         const linkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(CANONICAL_PORTFOLIO_URL);
         window.open(linkedInShareUrl, '_blank', 'noopener,noreferrer');
       }
 
-      /**
-       * Initialize IntersectionObserver & 3D Tilt / Spotlight Effects on Cards
-       */
       function enhanceRenderedCards() {
         const cards = document.querySelectorAll('.spotlight-card');
 
-        // Scroll Reveal Stagger Animation
         if ('IntersectionObserver' in window) {
           const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach((entry) => {
@@ -891,22 +876,20 @@
           cards.forEach((card) => card.classList.add('is-visible'));
         }
 
-        // Interactive Cursor Spotlight & Subtle 3D Tilt on Desktop
         cards.forEach((card) => {
           card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+            card.style.setProperty('--mouse-x', x + 'px');
+            card.style.setProperty('--mouse-y', y + 'px');
 
-            // Subtle 3D tilt only on pointer-fine devices
             if (window.matchMedia('(pointer: fine)').matches) {
               const centerX = rect.width / 2;
               const centerY = rect.height / 2;
               const rotateX = ((y - centerY) / centerY) * -3;
               const rotateY = ((x - centerX) / centerX) * 3;
-              card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+              card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-4px)';
             }
           });
 
@@ -916,16 +899,117 @@
         });
       }
 
-      /**
-       * Render filtered tool cards into the grid
-       */
+      function buildToolCard(tool, index) {
+        const article = document.createElement('article');
+        article.style.transitionDelay = (index * 65) + 'ms';
+        article.style.setProperty('--spotlight-color', tool.spotlightColor);
+        article.className = 'reveal-card spotlight-card group bg-white rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-indigo-300/80 flex flex-col justify-between overflow-hidden';
+
+        const topBar = document.createElement('div');
+        topBar.className = 'h-1.5 w-full bg-gradient-to-r ' + tool.topBarGradient;
+        article.appendChild(topBar);
+
+        const body = document.createElement('div');
+        body.className = 'p-6 relative z-10 flex-grow';
+
+        const topRow = document.createElement('div');
+        topRow.className = 'flex items-start justify-between gap-3 mb-4';
+
+        const iconBox = document.createElement('div');
+        iconBox.className = 'w-12 h-12 rounded-2xl bg-gradient-to-br ' + tool.iconGradient + ' flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300';
+        iconBox.appendChild(createSvgElement(ICON_PATHS[tool.iconKey], 'w-6 h-6 text-white'));
+
+        const badgeWrap = document.createElement('div');
+        badgeWrap.className = 'flex items-center gap-1.5 flex-wrap justify-end';
+
+        const numBadge = document.createElement('span');
+        numBadge.className = 'inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-slate-900 text-white tracking-wide';
+        numBadge.textContent = tool.number;
+
+        const catBadge = document.createElement('span');
+        catBadge.className = 'inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold border ' + tool.badgeStyle;
+        catBadge.textContent = tool.categoryLabel;
+
+        badgeWrap.appendChild(numBadge);
+        badgeWrap.appendChild(catBadge);
+        topRow.appendChild(iconBox);
+        topRow.appendChild(badgeWrap);
+        body.appendChild(topRow);
+
+        const subtitleEl = document.createElement('p');
+        subtitleEl.className = 'text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1';
+        subtitleEl.textContent = tool.subtitle;
+        body.appendChild(subtitleEl);
+
+        const headingEl = document.createElement('h3');
+        headingEl.className = 'font-display text-lg font-extrabold text-brand-900 group-hover:text-indigo-600 transition-colors leading-snug';
+        const titleLink = document.createElement('a');
+        titleLink.href = tool.liveUrl;
+        titleLink.target = '_blank';
+        titleLink.rel = 'noopener noreferrer';
+        titleLink.className = 'focus:outline-none';
+        titleLink.textContent = tool.title;
+        headingEl.appendChild(titleLink);
+        body.appendChild(headingEl);
+
+        const descEl = document.createElement('p');
+        descEl.className = 'mt-2.5 text-sm text-slate-600 leading-relaxed';
+        descEl.textContent = tool.description;
+        body.appendChild(descEl);
+
+        const tagsWrap = document.createElement('div');
+        tagsWrap.className = 'mt-4 flex flex-wrap gap-1.5';
+        tool.tags.forEach((tag) => {
+          const tagSpan = document.createElement('span');
+          tagSpan.className = 'inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-semibold border ' + tool.tagStyle;
+          tagSpan.textContent = tag;
+          tagsWrap.appendChild(tagSpan);
+        });
+        body.appendChild(tagsWrap);
+        article.appendChild(body);
+
+        const footer = document.createElement('div');
+        footer.className = 'px-6 py-4 bg-slate-50/95 border-t border-slate-100 flex items-center gap-2.5 relative z-10';
+
+        const launchBtn = document.createElement('a');
+        launchBtn.href = tool.liveUrl;
+        launchBtn.target = '_blank';
+        launchBtn.rel = 'noopener noreferrer';
+        launchBtn.className = 'flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r ' + tool.btnGradient + ' text-white text-xs sm:text-sm font-semibold transition-all shadow-sm group/btn';
+        const launchSpan = document.createElement('span');
+        launchSpan.textContent = 'Launch Live App';
+        launchBtn.appendChild(launchSpan);
+        launchBtn.appendChild(createSvgElement('M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14', 'w-4 h-4 text-white/90 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform'));
+
+        const copyBtn = document.createElement('button');
+        copyBtn.type = 'button';
+        copyBtn.title = 'Copy App Link';
+        copyBtn.setAttribute('aria-label', 'Copy link for ' + tool.title);
+        copyBtn.className = 'inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 hover:text-brand-900 text-xs sm:text-sm font-semibold transition-all';
+        copyBtn.appendChild(createSvgElement('M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1', 'w-4 h-4 text-indigo-600 shrink-0'));
+        const copyText = document.createElement('span');
+        copyText.className = 'hidden sm:inline';
+        copyText.textContent = 'Copy Link';
+        copyBtn.appendChild(copyText);
+
+        copyBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          copyTextToClipboard(tool.liveUrl, 'Copied: ' + tool.title);
+        });
+
+        footer.appendChild(launchBtn);
+        footer.appendChild(copyBtn);
+        article.appendChild(footer);
+
+        return article;
+      }
+
       function renderTools() {
         const query = currentSearchQuery.trim().toLowerCase();
 
         const filteredTools = UOC_TOOLS.filter((tool) => {
           const matchesCategory = currentCategory === 'all' || tool.category === currentCategory;
           if (!matchesCategory) return false;
-
           if (!query) return true;
 
           const searchableText = [
@@ -939,10 +1023,10 @@
           return searchableText.includes(query);
         });
 
-        resultsCounter.textContent = `Showing ${filteredTools.length} of ${UOC_TOOLS.length} applications`;
+        resultsCounter.textContent = 'Showing ' + filteredTools.length + ' of ' + UOC_TOOLS.length + ' applications';
+        toolsGrid.innerHTML = '';
 
         if (filteredTools.length === 0) {
-          toolsGrid.innerHTML = '';
           toolsGrid.classList.add('hidden');
           emptyState.classList.remove('hidden');
           return;
@@ -951,101 +1035,13 @@
         emptyState.classList.add('hidden');
         toolsGrid.classList.remove('hidden');
 
-        toolsGrid.innerHTML = filteredTools.map((tool, index) => {
-          const tagsHtml = tool.tags.map((tag) => `
-            <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-semibold border ${tool.tagStyle}">
-              ${tag}
-            </span>
-          `).join('');
-
-          return `
-            <article style="transition-delay: ${index * 65}ms; --spotlight-color: ${tool.spotlightColor};"
-              class="reveal-card spotlight-card group bg-white rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-indigo-300/80 flex flex-col justify-between overflow-hidden">
-              
-              <!-- Vibrant Top Accent Gradient Strip -->
-              <div class="h-1.5 w-full bg-gradient-to-r ${tool.topBarGradient}"></div>
-
-              <div class="p-6 relative z-10 flex-grow">
-                <!-- Card Top Row: Colorful Icon Badge + Number & Category Pill -->
-                <div class="flex items-start justify-between gap-3 mb-4">
-                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${tool.iconGradient} flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                    ${tool.iconSvg}
-                  </div>
-                  <div class="flex items-center gap-1.5 flex-wrap justify-end">
-                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-slate-900 text-white tracking-wide">
-                      ${tool.number}
-                    </span>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold border ${tool.badgeStyle}">
-                      ${tool.categoryLabel}
-                    </span>
-                  </div>
-                </div>
-                  <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold border ${tool.badgeStyle}">
-                    ${tool.categoryLabel}
-                  </span>
-                </div>
-
-                <!-- Card Subtitle & Title -->
-                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
-                  ${tool.subtitle}
-                </p>
-                <h3 class="font-display text-lg font-extrabold text-brand-900 group-hover:text-indigo-600 transition-colors leading-snug">
-                  <a href="${tool.liveUrl}" target="_blank" rel="noopener noreferrer" class="focus:outline-none">
-                    ${tool.title}
-                  </a>
-                </h3>
-
-                <!-- Card Description -->
-                <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
-                  ${tool.description}
-                </p>
-
-                <!-- Feature Tags -->
-                <div class="mt-4 flex flex-wrap gap-1.5">
-                  ${tagsHtml}
-                </div>
-              </div>
-
-              <!-- Card Action Footer -->
-              <div class="px-6 py-4 bg-slate-50/95 border-t border-slate-100 flex items-center gap-2.5 relative z-10">
-                <a href="${tool.liveUrl}" target="_blank" rel="noopener noreferrer"
-                   class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r ${tool.btnGradient} text-white text-xs sm:text-sm font-semibold transition-all shadow-sm group/btn">
-                  <span>Launch Live App</span>
-                  <svg class="w-4 h-4 text-white/90 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-
-                <button type="button" data-copy-url="${tool.liveUrl}" data-app-name="${tool.title}"
-                   title="Copy App Link" aria-label="Copy link for ${tool.title}"
-                   class="copy-app-btn inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 text-slate-700 hover:text-brand-900 text-xs sm:text-sm font-semibold transition-all">
-                  <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                  <span class="hidden sm:inline">Copy Link</span>
-                </button>
-              </div>
-            </article>
-          `;
-        }).join('');
-
-        // Attach individual Copy App Link listeners
-        document.querySelectorAll('.copy-app-btn').forEach((btn) => {
-          btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const appUrl = btn.getAttribute('data-copy-url');
-            const appName = btn.getAttribute('data-app-name');
-            copyTextToClipboard(appUrl, `Copied: ${appName}`);
-          });
+        filteredTools.forEach((tool, index) => {
+          toolsGrid.appendChild(buildToolCard(tool, index));
         });
 
-        // Activate scroll-reveal & tilt/spotlight interactions
         enhanceRenderedCards();
       }
 
-      /**
-       * Update active category pill styling
-       */
       function setActiveCategory(category) {
         currentCategory = category;
         filterPills.forEach((pill) => {
@@ -1061,14 +1057,12 @@
         renderTools();
       }
 
-      // Event Listeners: Filter Pills
       filterPills.forEach((pill) => {
         pill.addEventListener('click', () => {
           setActiveCategory(pill.getAttribute('data-filter'));
         });
       });
 
-      // Event Listener: Search Input
       searchInput.addEventListener('input', (e) => {
         currentSearchQuery = e.target.value;
         if (currentSearchQuery.length > 0) {
@@ -1079,7 +1073,6 @@
         renderTools();
       });
 
-      // Event Listener: Clear Search Button
       clearSearchBtn.addEventListener('click', () => {
         currentSearchQuery = '';
         searchInput.value = '';
@@ -1088,7 +1081,6 @@
         renderTools();
       });
 
-      // Event Listener: Reset Filters in Empty State
       resetFiltersBtn.addEventListener('click', () => {
         currentSearchQuery = '';
         searchInput.value = '';
@@ -1096,12 +1088,10 @@
         setActiveCategory('all');
       });
 
-      // Event Listeners: Share Buttons
       copyPortfolioLinkBtn.addEventListener('click', handleCopyPortfolioLink);
       shareWhatsAppBtn.addEventListener('click', handleWhatsAppShare);
       shareLinkedInBtn.addEventListener('click', handleLinkedInShare);
 
-      // Initial Render
       renderTools();
     })();
   </script>
