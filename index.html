@@ -232,14 +232,14 @@
             <span class="block sm:inline animate-gradient-text">Digital Utility Suite</span>
           </h1>
           <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            A colorful, zero-dependency ecosystem of <strong class="text-white font-semibold">6 live browser applications</strong> engineered to automate University of Calicut examination workflows—from seating allocation and FYUGP issue registers to dual A4 mark sheets, remuneration billing, and special contingency proformas.
+            A colorful, zero-dependency ecosystem of <strong class="text-white font-semibold">7 live browser applications</strong> engineered to automate University of Calicut examination workflows—from seating allocation and FYUGP internal marks/APC Excel generation to issue registers, dual A4 mark sheets, remuneration billing, and special contingency proformas.
           </p>
 
           <!-- Colorful Animated Metric Cards -->
           <div class="mt-7 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl">
             <div class="bg-gradient-to-br from-indigo-500/20 to-blue-600/10 border border-indigo-400/30 rounded-2xl px-4 py-3.5 backdrop-blur-md">
               <div class="font-display text-2xl sm:text-3xl font-extrabold text-cyan-300">
-                <span class="count-up" data-target="6">6</span> Apps
+                <span class="count-up" data-target="7">7</span> Apps
               </div>
               <div class="text-xs text-slate-300 mt-0.5 font-medium">Live Web Utilities</div>
             </div>
@@ -389,9 +389,9 @@
               <div class="mt-2 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-300">
                 <span class="inline-flex items-center gap-1.5 font-medium text-cyan-300">
                   <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                  6 Live Browser Modules
+                  7 Live Browser Modules
                 </span>
-                <span class="text-slate-400">Zero Install • Instant PDF</span>
+                <span class="text-slate-400">Zero Install • Instant PDF &amp; Excel</span>
               </div>
             </div>
           </div>
@@ -418,7 +418,7 @@
             <input
               type="text"
               id="toolSearchInput"
-              placeholder="Search apps, FYUGP, PDF, A4..."
+              placeholder="Search apps, FYUGP, APC, Excel..."
               aria-label="Search examination utilities"
               class="w-full pl-9 pr-8 py-2 text-sm bg-slate-100/90 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/20 transition-all"
             />
@@ -433,7 +433,7 @@
           <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-0.5 sm:pb-0" role="tablist" aria-label="Tool Categories">
             <button type="button" data-filter="all"
               class="filter-pill active-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all bg-gradient-to-r from-indigo-600 to-cyan-600 text-white shadow-sm">
-              All Tools (6)
+              All Tools (7)
             </button>
             <button type="button" data-filter="conduct"
               class="filter-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-700">
@@ -441,7 +441,7 @@
             </button>
             <button type="button" data-filter="evaluation"
               class="filter-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-700">
-              Evaluation &amp; Billing (3)
+              Evaluation &amp; Billing (4)
             </button>
           </div>
         </div>
@@ -493,7 +493,7 @@
         </p>
       </div>
       <div id="resultsCounter" class="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200/80 px-3.5 py-1.5 rounded-full self-start sm:self-auto">
-        Showing 6 of 6 applications
+        Showing 7 of 7 applications
       </div>
     </div>
 
@@ -511,7 +511,7 @@
       </div>
       <h3 class="font-display text-lg font-bold text-brand-900">No matching applications found</h3>
       <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">
-        Try clearing your search term or switching back to "All Tools (6)" to view the complete University of Calicut Examination Automation Suite.
+        Try clearing your search term or switching back to "All Tools (7)" to view the complete University of Calicut Examination Automation Suite.
       </p>
       <button type="button" id="resetFiltersBtn"
         class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-sm">
@@ -592,37 +592,11 @@
           </a>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notification Container -->
-  <div id="toastNotification" role="status" aria-live="polite"
-       class="fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 pointer-events-none transition-all duration-300 ease-out">
-    <div class="bg-brand-900 text-white border border-cyan-400/40 shadow-2xl rounded-2xl px-4 py-3 flex items-center gap-3 max-w-sm">
-      <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 text-brand-950 flex items-center justify-center shrink-0 font-bold">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-      </div>
-      <div class="min-w-0">
-        <p id="toastTitle" class="text-xs font-bold text-white">Link Copied!</p>
-        <p id="toastMessage" class="text-[11px] text-cyan-200 truncate mt-0.5">Ready to share.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Self-Contained Application Data & Interactive Logic -->
-  <script>
-    (function () {
-      'use strict';
-
-      // Canonical Portfolio URL used when sharing or copying link
-      const CANONICAL_PORTFOLIO_URL = 'https://javidkarathodi-lgtm.github.io/';
-
-      // Complete Independent Suite Dataset with Distinct Colorful Themes
+      // Complete Independent Suite Dataset with Distinct Colorful Themes (Ordered 01 to 07)
       const UOC_TOOLS = [
         {
           id: 'seatpro',
+          number: '01',
           category: 'conduct',
           categoryLabel: 'Exam Cell Operations',
           title: 'Exam Seating Arrangement',
@@ -642,7 +616,29 @@
             </svg>`
         },
         {
+          id: 'fyugp-apc-generator',
+          number: '02',
+          category: 'evaluation',
+          categoryLabel: 'Evaluation & Billing',
+          title: 'FYUGP Internal Marks & APC Generator',
+          subtitle: 'University of Calicut — FYUGP Marks & APC Excel Suite',
+          liveUrl: 'https://javidkarathodi-lgtm.github.io/fyugp-marks-apc-generator/',
+          description: 'Converts University of Calicut FYUGP regulation PDFs into structured internal marks workbooks and Cambria-formatted APC Excel sheets across semesters with double-verified calculations.',
+          tags: ['Regulation PDF Import', 'Internal Marks Excel', 'Cambria APC Format', 'Zero-Error Verification'],
+          topBarGradient: 'from-sky-500 via-blue-600 to-teal-400',
+          iconGradient: 'from-sky-500 to-blue-600',
+          btnGradient: 'from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700',
+          badgeStyle: 'bg-sky-50 text-sky-700 border-sky-200',
+          tagStyle: 'bg-sky-50/70 text-sky-800 border-sky-100',
+          spotlightColor: 'rgba(14, 165, 233, 0.15)',
+          iconSvg: `
+            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>`
+        },
+        {
           id: 'fyugp-register',
+          number: '03',
           category: 'conduct',
           categoryLabel: 'Exam Cell Operations',
           title: 'FYUGP Issue Register',
@@ -663,6 +659,7 @@
         },
         {
           id: 'marksheet',
+          number: '04',
           category: 'evaluation',
           categoryLabel: 'Evaluation & Billing',
           title: 'Dual A4 Mark Sheet Generator',
@@ -683,6 +680,7 @@
         },
         {
           id: 'malpractice',
+          number: '05',
           category: 'conduct',
           categoryLabel: 'Exam Cell Operations',
           title: 'Invigilator Incident & Malpractice Report',
@@ -703,6 +701,7 @@
         },
         {
           id: 'remuneration',
+          number: '06',
           category: 'evaluation',
           categoryLabel: 'Evaluation & Billing',
           title: 'Examination Remuneration Bill Generator',
@@ -723,6 +722,7 @@
         },
         {
           id: 'contingency-proforma',
+          number: '07',
           category: 'evaluation',
           categoryLabel: 'Evaluation & Billing',
           title: 'Special Additional Contingency Proforma',
@@ -835,19 +835,22 @@
           '1. *Exam Seating Arrangement:*',
           'https://javidkarathodi-lgtm.github.io/uoc-exam-seating-arraignment/',
           '',
-          '2. *FYUGP Issue Register:*',
+          '2. *FYUGP Internal Marks & APC Generator:*',
+          'https://javidkarathodi-lgtm.github.io/fyugp-marks-apc-generator/',
+          '',
+          '3. *FYUGP Issue Register:*',
           'https://javidkarathodi-lgtm.github.io/paper-issue-register/',
           '',
-          '3. *Dual A4 Mark Sheet Generator:*',
+          '4. *Dual A4 Mark Sheet Generator:*',
           'https://javidkarathodi-lgtm.github.io/calicut-marksheet-app/',
           '',
-          '4. *Invigilator Incident & Malpractice Report:*',
+          '5. *Invigilator Incident & Malpractice Report:*',
           'https://javidkarathodi-lgtm.github.io/malpractice-report/',
           '',
-          '5. *Examination Remuneration Bill Generator:*',
+          '6. *Examination Remuneration Bill Generator:*',
           'https://javidkarathodi-lgtm.github.io/calicut-remuneration-bill/',
           '',
-          '6. *Special Additional Contingency Proforma:*',
+          '7. *Special Additional Contingency Proforma:*',
           'https://javidkarathodi-lgtm.github.io/calicut-qp-contingency/',
           '',
           '*Explore Complete Suite:*',
@@ -963,11 +966,20 @@
               <div class="h-1.5 w-full bg-gradient-to-r ${tool.topBarGradient}"></div>
 
               <div class="p-6 relative z-10 flex-grow">
-                <!-- Card Top Row: Colorful Icon Badge + Category Pill -->
+                <!-- Card Top Row: Colorful Icon Badge + Number & Category Pill -->
                 <div class="flex items-start justify-between gap-3 mb-4">
                   <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${tool.iconGradient} flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                     ${tool.iconSvg}
                   </div>
+                  <div class="flex items-center gap-1.5 flex-wrap justify-end">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-slate-900 text-white tracking-wide">
+                      ${tool.number}
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold border ${tool.badgeStyle}">
+                      ${tool.categoryLabel}
+                    </span>
+                  </div>
+                </div>
                   <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold border ${tool.badgeStyle}">
                     ${tool.categoryLabel}
                   </span>
